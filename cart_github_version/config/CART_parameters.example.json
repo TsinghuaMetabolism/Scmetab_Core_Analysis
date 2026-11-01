@@ -1,0 +1,26 @@
+{
+  "normalization_scale": null,
+  "matching_ppm": null,
+  "ordering_count": null,
+  "baseline_stage": null,
+  "root_neighbors": null,
+  "trajectory": {
+    "ncenter": null,
+    "lambda_mult": null,
+    "sigma": null,
+    "gamma": null,
+    "max_iter": null,
+    "expanded_max_iter": null,
+    "tolerance": null
+  },
+  "spline_k": null,
+  "bootstrap_repeats": null,
+  "bootstrap_seed": null,
+  "kde_bandwidth_floor": null,
+  "reference_donors": null,
+  "reference_labels": null,
+  "bridge_donors": null,
+  "target_ids": null,
+  "dynamic_alpha": null,
+  "minimum_dynamic_donors": null
+}
