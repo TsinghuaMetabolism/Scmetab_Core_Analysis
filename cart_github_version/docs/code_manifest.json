@@ -1,0 +1,175 @@
+{
+  "scope": "Source and documentation files; this manifest excludes itself.",
+  "files": [
+    {
+      "path": ".gitignore",
+      "bytes": 151,
+      "sha256": "c5ab454e3410bfe80c4f65fa167a48935aae330248ae20c2eb319bb8e95309b7"
+    },
+    {
+      "path": "README.md",
+      "bytes": 4947,
+      "sha256": "497ad60fedfd5b22cc85e69c6e2fe30410db4a7d6e0a84af848b9b82a94ddd76"
+    },
+    {
+      "path": "config/CART_parameters.example.json",
+      "bytes": 586,
+      "sha256": "639b8601f8dde35407599b7c6b6f8b34b767dbd400263877fb5b4857105a3ba3"
+    },
+    {
+      "path": "docs/DATA_ACCESS.md",
+      "bytes": 3804,
+      "sha256": "c0765615ffb10618000c532d329657796cffa08f1287467a41024e984fc94626"
+    },
+    {
+      "path": "docs/METHODS.md",
+      "bytes": 3591,
+      "sha256": "7350db18e8b6fdd9b325df4abc5bbb52f9b3120768054cee8000738a7a10d965"
+    },
+    {
+      "path": "environment.json",
+      "bytes": 479,
+      "sha256": "e7a517a0e001ee9b8d6af093d62672350ee2c4d4919145e92fa3cdf2bd07edc6"
+    },
+    {
+      "path": "requirements.txt",
+      "bytes": 41,
+      "sha256": "3310189c513f390550f34d5134a01aeff2afef84b9965364a557264b86c0c014"
+    },
+    {
+      "path": "run.py",
+      "bytes": 242,
+      "sha256": "b50bdfd372c5345845260e284209c1976296723536a0acb91433737af92debeb"
+    },
+    {
+      "path": "scripts/run_workflow.py",
+      "bytes": 9030,
+      "sha256": "db213db3bdd0c8618ace6b45b13143e074e6d5d364984d6e72654cfb7e6bba74"
+    },
+    {
+      "path": "workflow/panel_4b-T1_trajectory/scripts/plot.R",
+      "bytes": 2510,
+      "sha256": "60d6ff327a4de10c259511f30fb1bf8751844e460f87b533ae8a663dc4b32929"
+    },
+    {
+      "path": "workflow/panel_4b-T1_trajectory/scripts/plot.py",
+      "bytes": 272,
+      "sha256": "59778e60a68d0ef38105141e1c1008344f07ffcf401b380e4dca3392f1d9e3e3"
+    },
+    {
+      "path": "workflow/panel_4c-T3_trajectory/scripts/plot.R",
+      "bytes": 2510,
+      "sha256": "60d6ff327a4de10c259511f30fb1bf8751844e460f87b533ae8a663dc4b32929"
+    },
+    {
+      "path": "workflow/panel_4c-T3_trajectory/scripts/plot.py",
+      "bytes": 272,
+      "sha256": "a984f9394164f25544e7f6a8e897f32ba67b38d4871fee4995df07aaa0dec058"
+    },
+    {
+      "path": "workflow/panel_4d-Batch03_trajectory/scripts/plot.R",
+      "bytes": 2510,
+      "sha256": "60d6ff327a4de10c259511f30fb1bf8751844e460f87b533ae8a663dc4b32929"
+    },
+    {
+      "path": "workflow/panel_4d-Batch03_trajectory/scripts/plot.py",
+      "bytes": 272,
+      "sha256": "4206cbdf8e811231cd8141efeee3f3b8c3513384213a6177537712cb96a9bd49"
+    },
+    {
+      "path": "workflow/panel_4e-shared_metabolic_dynamics/scripts/plot.R",
+      "bytes": 5287,
+      "sha256": "3fab72de90f265fa6fc67b26028cbb466c1d7bd46423be5454e40f73a5d63c8f"
+    },
+    {
+      "path": "workflow/panel_4e-shared_metabolic_dynamics/scripts/plot.py",
+      "bytes": 272,
+      "sha256": "3f411deeb792099a910dd514a696a953db716d01cff572dff904ed54d91e5654"
+    },
+    {
+      "path": "workflow/panel_4f-SM_metabolic_curves/scripts/plot.R",
+      "bytes": 3760,
+      "sha256": "9203ff515afb9070aff3b7be4f557e56fb6e5bc05ebebc821b2b8c5b6bf225d9"
+    },
+    {
+      "path": "workflow/panel_4f-SM_metabolic_curves/scripts/plot.py",
+      "bytes": 272,
+      "sha256": "92ca4b1e093eb69332106b296ea771c0beab14133fbd3010beac51d89c19ea15"
+    },
+    {
+      "path": "workflow/panel_4g-SM_day_abundance/scripts/plot.R",
+      "bytes": 2370,
+      "sha256": "88af776fa27111992c1ca089a076aa51e96c748647adf56d1b92fe5f1559fa41"
+    },
+    {
+      "path": "workflow/panel_4g-SM_day_abundance/scripts/plot.py",
+      "bytes": 272,
+      "sha256": "a7311a38b5177f5106173e326ca9551f2ff80707c069f64f738263e5c56595b5"
+    },
+    {
+      "path": "workflow/panel_5d-Bridge_SM_comparison/scripts/plot.R",
+      "bytes": 3692,
+      "sha256": "0110cf55c266caccca20238748bc0e603d03fef43d3a4926db4f5f47853f3784"
+    },
+    {
+      "path": "workflow/panel_5d-Bridge_SM_comparison/scripts/plot.py",
+      "bytes": 272,
+      "sha256": "76e6e81bcce0d64147b6a745d2dc58aa91fada1f5bc3529fd0e8893df8664338"
+    },
+    {
+      "path": "workflow/panel_5e-Myr_projection/scripts/plot.R",
+      "bytes": 2497,
+      "sha256": "a8129e375973c74f78b98caf628b831b40d60bff2e292d19e9c9755992fc7cc6"
+    },
+    {
+      "path": "workflow/panel_5e-Myr_projection/scripts/plot.py",
+      "bytes": 272,
+      "sha256": "f8fe702fc81b9111f60720bef263f99c742e5dddf4034815909173244443f1af"
+    },
+    {
+      "path": "workflow/panel_5f-pseudotime_distribution/scripts/plot.R",
+      "bytes": 3844,
+      "sha256": "5d8bb57f7392c70d55501250cddf5131aeb6837ab96a6bdfae260b0915da67de"
+    },
+    {
+      "path": "workflow/panel_5f-pseudotime_distribution/scripts/plot.py",
+      "bytes": 272,
+      "sha256": "cd3535b681d55003f338d344902c100d11970c2744dea5441ab916bbfac1d845"
+    },
+    {
+      "path": "workflow/provenance/panels.json",
+      "bytes": 407,
+      "sha256": "306261fffe73fdceb5dd3c685daa5822ee80473eb3bd5271bdbf8c19c9a85d61"
+    },
+    {
+      "path": "workflow/scripts/panel_statistics.py",
+      "bytes": 7666,
+      "sha256": "09c555f2aee46e08c00dfb8ed91df7d06d946b53c4353c8a19c407868964ddb1"
+    },
+    {
+      "path": "workflow/scripts/plot_common.R",
+      "bytes": 6328,
+      "sha256": "4396768af431e461cd19b7b95db57ff966f7034c35ca523af5daf687f4678f00"
+    },
+    {
+      "path": "workflow/upstream/dynamics/fit_dynamics.py",
+      "bytes": 3722,
+      "sha256": "abeac4629e1f3db675f3fe58f3eb43a9ae51c9eb0957ffef269f4e60a41e8e74"
+    },
+    {
+      "path": "workflow/upstream/preprocessing/preprocess.py",
+      "bytes": 5806,
+      "sha256": "ea72945a4bb1d6fbab5af471b23a2c931642f9a9566bf92de0e798d40aed9cde"
+    },
+    {
+      "path": "workflow/upstream/projection/project_reference.py",
+      "bytes": 9451,
+      "sha256": "02ac8d3aae753849a8723166f882499ab61ccffb52b213db48a3957bfdcb0f87"
+    },
+    {
+      "path": "workflow/upstream/trajectory/fit_reference.R",
+      "bytes": 6962,
+      "sha256": "7e663f431513308a36845fce4fdaa53be2b14799c00940fcfa9c9395ffd994af"
+    }
+  ]
+}
