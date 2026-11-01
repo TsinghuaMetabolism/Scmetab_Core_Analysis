@@ -1,0 +1,36 @@
+suppressPackageStartupMessages(library(data.table))
+a<-grep('^--file=',commandArgs(FALSE),value=TRUE)
+root<-dirname(normalizePath(sub('^--file=','',a[1])))
+dir.create(file.path(root,'tables'),showWarnings=FALSE)
+old<-fread(file.path(root,'comparison_inputs/previous_four_day_KW_GAM.csv'))
+new<-fread(file.path(root,'panel_c/tables/all_features_GAM_significance.csv'))
+oldc<-fread(file.path(root,'comparison_inputs/previous_cell_annotations.csv'))
+newc<-fread(file.path(root,'panel_b/tables/plot_cells.csv'))
+audit<-fread(file.path(root,'comparison_inputs/ordering_time_trend_audit.csv'))
+newscreen<-fread(file.path(root,'panel_b/inputs/ordering_feature_screen.csv'))
+old_ids<-audit[selected==TRUE,feature_id];new_ids<-newscreen[selected==TRUE,feature_id]
+z<-merge(old[,.(feature_id,old_p=association_p_Osi,old_FDR=association_BH_FDR_Osi)],
+         new[,.(feature_id,new_p=association_p_Osi,new_FDR=association_BH_FDR_Osi)],
+         by='feature_id')
+z[,`:=`(old_significant=old_FDR<.05,new_significant=new_FDR<.05,
+         significant_in_both=old_FDR<.05&new_FDR<.05)]
+fwrite(z,file.path(root,'tables/previous_vs_endpoint_GAM.csv'))
+setkey(oldc,cell_id);setkey(newc,cell_id);oldc<-oldc[newc$cell_id]
+stopifnot(identical(oldc$cell_id,newc$cell_id))
+tr<-newc$day!='D0'
+metrics<-data.table(
+ metric=c('old_ordering_features','new_ordering_features','ordering_overlap',
+          'old_ordering_strict_four_day_monotonic','new_ordering_strict_four_day_monotonic',
+          'old_GAM_significant','new_GAM_significant','GAM_significant_overlap',
+          'old_vs_new_GAM_p_spearman','old_vs_new_pseudotime_spearman_all',
+          'old_vs_new_pseudotime_spearman_treated'),
+ value=c(length(old_ids),length(new_ids),length(intersect(old_ids,new_ids)),
+         sum(audit[feature_id%in%old_ids,pooled_monotonic]),
+         sum(audit[feature_id%in%new_ids,pooled_monotonic]),
+         sum(z$old_significant),sum(z$new_significant),sum(z$significant_in_both),
+         cor(z$old_p,z$new_p,method='spearman'),
+         cor(oldc$pseudotime,newc$pseudotime,method='spearman'),
+         cor(oldc$pseudotime[tr],newc$pseudotime[tr],method='spearman'))
+)
+fwrite(metrics,file.path(root,'tables/previous_vs_endpoint_summary.csv'))
+print(metrics)

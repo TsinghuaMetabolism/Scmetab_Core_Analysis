@@ -1,0 +1,40 @@
+K<-4L;FDR_CUTOFF<-.05;Z_LIMIT<-2
+source_file<-sub('^--file=','',grep('^--file=',commandArgs(),value=TRUE)[1]);setwd(dirname(dirname(normalizePath(source_file))))
+read_input<-function(name)read.csv(file.path('inputs',name),check.names=FALSE,stringsAsFactors=FALSE)
+read_matrix<-function(name){x<-read_input(name);ids<-x[[1]];m<-as.matrix(x[,-1,drop=FALSE]);rownames(m)<-ids;storage.mode(m)<-'double';m}
+suppressPackageStartupMessages({library(cluster);library(pheatmap);library(grid);library(ragg)})
+if(!file.exists('tables/GAM_fitted_Osi.csv')){
+  status<-system2(file.path(R.home('bin'),'Rscript'),shQuote('scripts/00_refit_shared_Gaussian_GAM_curves.R'))
+  stopifnot(status==0)
+}
+ym<-read.csv('tables/GAM_fitted_Osi.csv',check.names=FALSE)
+Y<-as.matrix(ym[,-1]);rownames(Y)<-ym$feature_id
+tests<-read_input('all_features_GAM_significance.csv')
+tests$q_value<-tests$association_BH_FDR_Osi
+pg<-read.csv('tables/GAM_pseudotime_grid.csv')
+tests$peak_pseudotime<-pg$pseudotime[max.col(Y[match(tests$feature_id,rownames(Y)),,drop=FALSE],ties.method='first')]
+d<-list(fitted=Y,grid=pg$pseudotime,features=read_input('metabolite_feature_annotations.csv'),tests=tests)
+Z<-t(apply(Y,1,function(x)(x-mean(x))/sd(x)));dimnames(Z)<-dimnames(Y)
+keep<-d$tests$q_value[match(rownames(Z),d$tests$feature_id)]<FDR_CUTOFF & apply(Z,1,function(x)all(is.finite(x)))
+zz<-Z[keep,,drop=FALSE];fit<-pam(as.dist((1-cor(t(zz)))/2),K,diss=TRUE,pamonce=5)
+f<-d$features;f$cluster<-unname(fit$clustering[match(f$feature_id,rownames(zz))]);f$q_value<-d$tests$q_value[match(f$feature_id,d$tests$feature_id)]
+f$peak_pseudotime<-d$tests$peak_pseudotime[match(f$feature_id,d$tests$feature_id)]
+ann<-f[!is.na(f$cluster)&!is.na(f$annotation)&nzchar(f$annotation),]
+ann<-ann[order(ann$cluster,ann$peak_pseudotime,ann$annotation,ann$feature_id),]
+z<-Z[ann$feature_id,,drop=FALSE];yp<-Y[ann$feature_id,,drop=FALSE]
+write.csv(data.frame(ann[,c('feature_id','annotation','mz','KEGG_IDs','q_value','cluster')],z,check.names=FALSE),'tables/heatmap_rowZ.csv',row.names=FALSE)
+write.csv(data.frame(feature_id=ann$feature_id,yp,check.names=FALSE),'tables/fitted_intensity.csv',row.names=FALSE)
+write.csv(data.frame(column=colnames(z),reference_pseudotime=d$grid),'tables/heatmap_columns.csv',row.names=FALSE)
+write.csv(d$tests,'tables/heatmap_significance_all_features.csv',row.names=FALSE)
+write.csv(data.frame(feature_id=rownames(zz),cluster=fit$clustering),'tables/cluster_membership.csv',row.names=FALSE)
+write.csv(data.frame(cluster=1:K,all_significant=as.integer(table(factor(fit$clustering,levels=1:K))),annotated=as.integer(table(factor(ann$cluster,levels=1:K)))),'tables/cluster_counts.csv',row.names=FALSE)
+at<-data.frame(Trend=factor(paste0('C',ann$cluster),levels=paste0('C',1:K)),row.names=ann$feature_id)
+labs<-ifelse(nchar(ann$annotation)>78,paste0(substr(ann$annotation,1,75),'...'),ann$annotation)
+labs<-gsub('γ','gamma-',gsub('α','alpha-',labs,fixed=TRUE),fixed=TRUE)
+gaps<-cumsum(table(factor(ann$cluster,levels=1:K)));gaps<-gaps[gaps<nrow(z)]
+lc<-rep('',ncol(z));idx<-unique(round(seq(1,ncol(z),length.out=6)));lc[idx]<-sprintf('%.1f',d$grid[idx])
+draw<-function(){pheatmap(pmax(pmin(z,Z_LIMIT),-Z_LIMIT),cluster_rows=FALSE,cluster_cols=FALSE,labels_row=labs,labels_col=lc,annotation_row=at,annotation_colors=list(Trend=setNames(c('#2166AC','#2CB1BC','#E6AB38','#BD374B'),paste0('C',1:K))),gaps_row=gaps,color=colorRampPalette(c('#2166AC','#F7F7F7','#B2182B'))(100),breaks=seq(-Z_LIMIT,Z_LIMIT,length.out=101),border_color=NA,fontsize_row=6.6,fontsize_col=9,main=paste('Osi pseudotime dynamics |',nrow(z),'annotated features | K =',K))}
+w<-15;h<-max(10,nrow(z)*.16+2)
+cairo_pdf('figures/panel_c_K4_dynamic_heatmap.pdf',width=w,height=h);draw();dev.off()
+agg_png('figures/panel_c_K4_dynamic_heatmap.png',width=w,height=h,units='in',res=260);draw();dev.off()
+print(read.csv('tables/cluster_counts.csv'))

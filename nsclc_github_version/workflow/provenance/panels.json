@@ -1,0 +1,10 @@
+{
+  "b": "panel_b-P59_trajectory",
+  "c": "panel_c-P41_trajectory",
+  "d": "panel_d-P39_trajectory",
+  "e": "panel_e-shared_metabolic_dynamics",
+  "f": "panel_f-common_pathway_enrichment",
+  "g": "panel_g-P59_metabolic_curves",
+  "h": "panel_h-P59_Day8_projection",
+  "i": "panel_i-P59_pseudotime_distribution"
+}

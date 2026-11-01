@@ -1,0 +1,274 @@
+[
+  {
+    "path": "workflow/panel_b-P59_trajectory/scripts/original_plot.R",
+    "sha256": "4863cab0accde753fb6624b5937f8368c98d90a4acc4bcb7e33c3c4f6a945a0d"
+  },
+  {
+    "path": "workflow/panel_b-P59_trajectory/scripts/plot.py",
+    "sha256": "faa124c9b3886e8d9697b8bfa268fb68fbf238ae609b3fbdb6eaf5c8cf2bc16c"
+  },
+  {
+    "path": "workflow/panel_c-P41_trajectory/scripts/original_plot.R",
+    "sha256": "00c79ee686b573c39254198aaff2779749467f9cf7a74df72f484c149fbc47b5"
+  },
+  {
+    "path": "workflow/panel_c-P41_trajectory/scripts/plot.py",
+    "sha256": "a3f9655d895c412c59b632ccbcee34d704631a7a18b9a0844fecd15ff5594851"
+  },
+  {
+    "path": "workflow/panel_d-P39_trajectory/scripts/original_plot.R",
+    "sha256": "074b7c341e136ece650e14bfbe52cc3fa25a314573b135e63bc1b88818b10624"
+  },
+  {
+    "path": "workflow/panel_d-P39_trajectory/scripts/plot.py",
+    "sha256": "05ff1ac024e0d3da83e63b519789844b2d26e4aa933a312a16d88c374d3fcba9"
+  },
+  {
+    "path": "workflow/panel_e-shared_metabolic_dynamics/scripts/plot.py",
+    "sha256": "5cece382fdd9dacf1253a2ca97c49ec9395c253dab7102f31d22cc6b70a20d9e"
+  },
+  {
+    "path": "workflow/panel_f-common_pathway_enrichment/RUN_ALL.R",
+    "sha256": "68e6c9c1c164652de31d5e4aebc4beb453b1c38a3bdacbb9665a3bdf292a17df"
+  },
+  {
+    "path": "workflow/panel_f-common_pathway_enrichment/scripts/01_run_KEGG_ORA.R",
+    "sha256": "04a03b15a3bc36f38b1ce308afde9dbfd901a42e1f550970a83c98332b5f1c6a"
+  },
+  {
+    "path": "workflow/panel_f-common_pathway_enrichment/scripts/02_validate_results.py",
+    "sha256": "de935b96896b4aa4013e148688a741055e00a8e38060eac5a8a0f73a0a0814f9"
+  },
+  {
+    "path": "workflow/panel_f-common_pathway_enrichment/scripts/plot.py",
+    "sha256": "8ba07e363815dd70f64d161d2547730f3b40eed93647ec1673a3b8a577081c27"
+  },
+  {
+    "path": "workflow/panel_g-P59_metabolic_curves/scripts/plot.py",
+    "sha256": "715f6e9e227d7e85d4fc21fc95ff8c398b68ca1d1ee6a4fd40fa5708eaf595c6"
+  },
+  {
+    "path": "workflow/panel_h-P59_Day8_projection/scripts/plot.py",
+    "sha256": "36dc5f2a1d2693d80385348fdd3828eaac9f921156948ac70035dcb69b30277f"
+  },
+  {
+    "path": "workflow/panel_i-P59_pseudotime_distribution/scripts/plot.py",
+    "sha256": "8d3d27a22612cf531df82741d75294d852d95091c8c0e6bafdf4bc3428d4fe08"
+  },
+  {
+    "path": "workflow/panel_i-P59_pseudotime_distribution/scripts/toolkit/pseudotime_plot.py",
+    "sha256": "90ab7a990d5d197a26758b0714f6af1ad20aaad53eb3c558e210a2f16ea3847f"
+  },
+  {
+    "path": "workflow/provenance/panels.json",
+    "sha256": "903652783d5e38635a1a68b3d506fea63d59c1fffcd005602a0284440e032d7e"
+  },
+  {
+    "path": "workflow/run.py",
+    "sha256": "b672f8b768a07c978aa5f25ec25b925155c63ac334f70e9eeb035ea6284e7a58"
+  },
+  {
+    "path": "workflow/scripts/rebuild.py",
+    "sha256": "cfef47e7863c8107d21ae06f0f15a547bf53fee83d28511c6d4c76b16704b2f6"
+  },
+  {
+    "path": "workflow/upstream/P39/02_analysis/P39_complete_20260922/scripts/00_audit_inputs.R",
+    "sha256": "fd54ee1cb15d05b53e20d1dcd10d41d2c6e268043ff121193696b45c3c217cf3"
+  },
+  {
+    "path": "workflow/upstream/P39/02_analysis/P39_complete_20260922/scripts/01_integrate.R",
+    "sha256": "71b12ae1ee605324a4e39c45a458fe50b2754b5eadb7c15d9e019af62d9f78ab"
+  },
+  {
+    "path": "workflow/upstream/P39/02_analysis/P39_complete_20260922/scripts/10_feature_and_anchor_audit.R",
+    "sha256": "96b6a448a72774291cbf7d617e1f4bc4f4f3b1b76cd3e54f0e5b708201fa4fb6"
+  },
+  {
+    "path": "workflow/upstream/P39/02_analysis/P39_complete_20260922/scripts/16_heldout_integration_validation.R",
+    "sha256": "ec0ee2545cade99f785692960d7566a8cc1cfc4bcf21eb78d69df3c4a5a0ac69"
+  },
+  {
+    "path": "workflow/upstream/P39/02_analysis/P39_complete_20260922/scripts/21_anchor_consistent_ordering_sensitivity.R",
+    "sha256": "8c8461fa75c52448e5f40debc2a47cb2e9a29be773ba21505de196bf3e69fb0e"
+  },
+  {
+    "path": "workflow/upstream/P39/02_analysis/P39_complete_20260922/scripts/GAM_body.R",
+    "sha256": "732399b0c3c62dab4570cb4cf4c348d0d71cd2289828ff6bbfa0a9fc3d600af9"
+  },
+  {
+    "path": "workflow/upstream/P39/02_analysis/P39_D0D14_significant_panels_20260923/00_prepare_inputs.R",
+    "sha256": "a329f6fb210a88df4416e0a5a0eaa44fb9b1bc84d99fdb540ca5c4417eff5c79"
+  },
+  {
+    "path": "workflow/upstream/P39/02_analysis/P39_D0D14_significant_panels_20260923/01_create_overview.R",
+    "sha256": "8e0dc0c093aea59964000d55b0901851d32c0f9f1df3f25d08a8e73e3af92462"
+  },
+  {
+    "path": "workflow/upstream/P39/02_analysis/P39_D0D14_significant_panels_20260923/02_validate_results.R",
+    "sha256": "d166c45cacc08284451f081ad0aa7034a293aeccbe5b3dee4cbeb7d6d6c24cfc"
+  },
+  {
+    "path": "workflow/upstream/P39/02_analysis/P39_D0D14_significant_panels_20260923/03_compare_previous_analysis.R",
+    "sha256": "12373910180b369796150393aa34d56c46edbdd7e04d2f1a985df402d0d2e66d"
+  },
+  {
+    "path": "workflow/upstream/P39/02_analysis/P39_D0D14_significant_panels_20260923/panel_a/scripts/01_plot_P39_UMAP_before_after_correction.R",
+    "sha256": "1c73bf9c580194629346b32541bdf9191ef3c91a1d199c16d06a7fd38f6d3ebf"
+  },
+  {
+    "path": "workflow/upstream/P39/02_analysis/P39_D0D14_significant_panels_20260923/panel_a/scripts/02_plot_integrated_UMAP_split_by_batch.R",
+    "sha256": "b151a93e6260693102cb2f44e891aa23875a8a9524fc200934e683ce58877476"
+  },
+  {
+    "path": "workflow/upstream/P39/02_analysis/P39_D0D14_significant_panels_20260923/panel_b/scripts/01_plot_Osi_DDRTree_group_and_pseudotime.R",
+    "sha256": "074b7c341e136ece650e14bfbe52cc3fa25a314573b135e63bc1b88818b10624"
+  },
+  {
+    "path": "workflow/upstream/P39/02_analysis/P39_D0D14_significant_panels_20260923/panel_b/scripts/02_plot_day_batch_and_stage_distribution.R",
+    "sha256": "4ce0df9c8dc5fbf165b0a137db3fbea4471f7ecc1434301948ddc2ff0c39e72a"
+  },
+  {
+    "path": "workflow/upstream/P39/02_analysis/P39_D0D14_significant_panels_20260923/panel_c/scripts/00_fit_single_condition_Gaussian_GAM.R",
+    "sha256": "732399b0c3c62dab4570cb4cf4c348d0d71cd2289828ff6bbfa0a9fc3d600af9"
+  },
+  {
+    "path": "workflow/upstream/P39/02_analysis/P39_D0D14_significant_panels_20260923/panel_c/scripts/01_cluster_K4_and_plot_metabolite_dynamics.R",
+    "sha256": "435a85ace011188c4d283e7757bac84dafcf6c2b20e891c5912d6a170400c264"
+  },
+  {
+    "path": "workflow/upstream/P39/02_analysis/P39_D0D14_significant_panels_20260923/panel_d/scripts/01_KEGG_ORA.R",
+    "sha256": "716ef3c64bf2c303b5cd54d0d7f705b70015f91e2f0f9ec8c0a32de26557b4fd"
+  },
+  {
+    "path": "workflow/upstream/P39/02_analysis/P39_D0D14_significant_panels_20260923/panel_e/scripts/01_test_timepoint_MWU_and_plot_pseudobulk.R",
+    "sha256": "150c7ed7e9edbbca0a074b3b0390feb6419c0d7b4eb57d36097c30f43248c792"
+  },
+  {
+    "path": "workflow/upstream/P39/02_analysis/P39_D0D14_significant_panels_20260923/RUN_ANALYSIS.R",
+    "sha256": "0351871aabacbcebf17170c6eaa46573477551debad045fd9892970f9df5b438"
+  },
+  {
+    "path": "workflow/upstream/P41/02_analysis/P41_complete_20260922/00_redraw_all_panels_and_preview.R",
+    "sha256": "654ccb46c28c62e0a12b65431092d028e4df7a574ab31f7d5a98d7ad9ee4a497"
+  },
+  {
+    "path": "workflow/upstream/P41/02_analysis/P41_complete_20260922/01_create_vector_overview.R",
+    "sha256": "bc3006050c666d5ef464fbe277de7b2ed337ef0b8f8957e1637d44645bc42c12"
+  },
+  {
+    "path": "workflow/upstream/P41/02_analysis/P41_complete_20260922/02_validate_shared_GAM_results.R",
+    "sha256": "087d762663141f01b1eac294ab9e808fce0083853fe6ff68a2c7299fc448bca3"
+  },
+  {
+    "path": "workflow/upstream/P41/02_analysis/P41_complete_20260922/matrix/scripts/01_build_annotated_cell_feature_master.R",
+    "sha256": "aca9be401bb2c7c611fb8a8e85d70caf262833c42a8fe0728637860fd182c2b4"
+  },
+  {
+    "path": "workflow/upstream/P41/02_analysis/P41_complete_20260922/panel_a/scripts/01_plot_P41_UMAP_before_after_correction.R",
+    "sha256": "669e97919881eb5f3bc804297a1e522e25c3dc559e96c2c25f4a78504b836a69"
+  },
+  {
+    "path": "workflow/upstream/P41/02_analysis/P41_complete_20260922/panel_a/scripts/02_plot_integrated_UMAP_split_by_treatment.R",
+    "sha256": "2a4ccf81a3f457b553c7727199831fbae67d07d8d73564b68c4060e06d7847c4"
+  },
+  {
+    "path": "workflow/upstream/P41/02_analysis/P41_complete_20260922/panel_a/scripts/03_audit_time_resolved_UMAP.R",
+    "sha256": "9baf751f6e65030ec789928edd6beb22b130c738aa9a63478d70ea93a43d4728"
+  },
+  {
+    "path": "workflow/upstream/P41/02_analysis/P41_complete_20260922/panel_b/scripts/01_plot_Osi_DDRTree_group_and_pseudotime.R",
+    "sha256": "00c79ee686b573c39254198aaff2779749467f9cf7a74df72f484c149fbc47b5"
+  },
+  {
+    "path": "workflow/upstream/P41/02_analysis/P41_complete_20260922/panel_c/scripts/00_refit_shared_Gaussian_GAM_curves.R",
+    "sha256": "6544ae875d93b5492570a67435e2c9631488f950a96519a4333d3d1f05a10024"
+  },
+  {
+    "path": "workflow/upstream/P41/02_analysis/P41_complete_20260922/panel_c/scripts/01_cluster_K4_and_plot_metabolite_dynamics.R",
+    "sha256": "1db61ff9ae9950c82e8d56de6d8c6d017cbf4d13011a4ae764e4d521f68052d4"
+  },
+  {
+    "path": "workflow/upstream/P41/02_analysis/P41_complete_20260922/panel_d/scripts/01_sort_and_plot_KEGG_enrichment.R",
+    "sha256": "cffa5c3b7f9e297da6ca45b4eb9a74248dcfc5c016ddb7a2366673511b2a8aca"
+  },
+  {
+    "path": "workflow/upstream/P41/02_analysis/P41_complete_20260922/panel_e/scripts/01_test_timepoint_MWU_and_plot_pseudobulk.R",
+    "sha256": "c61f0a5ffb87868546a2de2114bccb4223f29c83f5946b5a04216b8aa89693ac"
+  },
+  {
+    "path": "workflow/upstream/P41/02_analysis/P41_complete_20260922/panel_g/scripts/00_constrain_Ridge_to_P41_reference_local_support.R",
+    "sha256": "6b4a623221b95ba4696d379d60659a5b6f92fecef950b7283f7092eada02e649"
+  },
+  {
+    "path": "workflow/upstream/P41/02_analysis/P41_complete_20260922/panel_g/scripts/01_plot_reference_projection_and_state_composition.R",
+    "sha256": "4e5234b323553fd2b33bb10e26fd948bccff640c2e603667fce77bb7a015d74c"
+  },
+  {
+    "path": "workflow/upstream/P41/02_analysis/P41_complete_20260922/panel_h/scripts/01_plot_significant_choline_pathway_dynamics.R",
+    "sha256": "b42d68e9966f887a72b90148e669ffa5c36f9bbd4ed8ed00f18e1b3b674dddf8"
+  },
+  {
+    "path": "workflow/upstream/P41/02_analysis/P41_complete_20260922/panel_h/scripts/02_export_all_pathway_member_statistics.R",
+    "sha256": "4a8d8a9bc92d24e627553baa43d14a0f08533136ca3e26ba04ea992184db31ae"
+  },
+  {
+    "path": "workflow/upstream/P41/02_analysis/P41_complete_20260922/RUN_ALL.R",
+    "sha256": "7034ad430a3a29b7a125bd175be174ade4cae942d80eeeb3714ccfcda7e2a939"
+  },
+  {
+    "path": "workflow/upstream/P41/02_analysis/P41_complete_20260922/scripts/00_audit_inputs.R",
+    "sha256": "408a136bbceaf854c62a69bb9cb205bd588069b35f1d33f8e55b286bf6af1a29"
+  },
+  {
+    "path": "workflow/upstream/P41/02_analysis/P41_complete_20260922/scripts/01_integrate.R",
+    "sha256": "44c3aebdda6e397b0ad3a4355d5ccb713eba06c6a8bbf0869e5cc725f9ff12c8"
+  },
+  {
+    "path": "workflow/upstream/P41/02_analysis/P41_complete_20260922/scripts/02_trajectory_projection.R",
+    "sha256": "e8692811d75d0705c3cb5e58c595f417d9ecf5f81a9671d72afa1b6cb6751d5d"
+  },
+  {
+    "path": "workflow/upstream/P41/02_analysis/P41_complete_20260922/scripts/02b_prepare_local_support_inputs.R",
+    "sha256": "0475e7826443a8eeb4a069fdadc7cff25f81e383241ead0fe99781967c92f6b6"
+  },
+  {
+    "path": "workflow/upstream/P41/02_analysis/P41_complete_20260922/scripts/02c_install_constrained_mapping.R",
+    "sha256": "83510b054efbee4a980f57b4ef8b0d5375105c56a1a7f6afe293e3f49b038875"
+  },
+  {
+    "path": "workflow/upstream/P41/02_analysis/P41_complete_20260922/scripts/03_shared_GAM.R",
+    "sha256": "7890ce848754f86559959bc6bfd88d407b052df209bbf00c10188cc00ae0906a"
+  },
+  {
+    "path": "workflow/upstream/P41/02_analysis/P41_complete_20260922/scripts/04_diagnostics.R",
+    "sha256": "5faa0ee7123f4a930edca9d010a5acd24ae118b3ea083d06ace61df1c5046a82"
+  },
+  {
+    "path": "workflow/upstream/P59/02_analysis/P59_choline_25_GAM_full1928_20261005/scripts/01_fit_full_GAM.R",
+    "sha256": "71f4431087c54e36db2819438cdf4a9ab80eba0f9b685b297bace37586179163"
+  },
+  {
+    "path": "workflow/upstream/P59/02_analysis/P59_choline_25_GAM_full1928_20261005/scripts/02_plot_GAM.R",
+    "sha256": "29e581c574cad6ac8a4ace6281d7659b9ad545e6976aed3666967fba7979f052"
+  },
+  {
+    "path": "workflow/upstream/P59/02_analysis/P59_choline_25_GAM_full1928_20261005/scripts/04_validate.R",
+    "sha256": "093cf93c1c973ec273285105fcccc2acbbc8c5a3a1518dfb644026cc7fc7175a"
+  },
+  {
+    "path": "workflow/upstream/P59/02_analysis/P59_final_analysis_20260919/scripts/integration_core.py",
+    "sha256": "e13db0fd85a7c0e54b709d201fa88a9bed4ad5356496de070d67dace19bbc9a0"
+  },
+  {
+    "path": "workflow/upstream/P59/02_analysis/P59_final_analysis_20260919/scripts/recompute_from_raw.py",
+    "sha256": "5f6ea497c6a4fb5949e794a1b29168bfc02aa4cb9cb250b3d5c2c47d547c2854"
+  },
+  {
+    "path": "workflow/upstream/P59/02_analysis/P59_final_analysis_20260919/scripts/refit_final_monocle2.R",
+    "sha256": "8e8159e1dc5fc6d31de51cf0fe44111c08f2eee7313c0c9e195e8053832232a3"
+  },
+  {
+    "path": "workflow/upstream/P59/02_analysis/P59_selected_2_and_7_short_names_20261005/scripts/01_plot_groups.R",
+    "sha256": "39805874b9b5fe86fce359303d29cbcbddbf96724c7f3bfce519a05706d4ce53"
+  }
+]

@@ -1,0 +1,10 @@
+suppressPackageStartupMessages({library(data.table);library(cluster)})
+a<-grep('^--file=',commandArgs(),value=TRUE);root<-dirname(dirname(normalizePath(sub('^--file=','',a[1]))));d<-readRDS(file.path(root,'audit/integrated.rds'));pc<-readRDS(file.path(root,'audit/PCA_before.rds'));m<-d$metadata
+proj<-function(x)scale(x,center=pc$center,scale=FALSE)%*%pc$rotation
+zs<-list(Before=proj(d$before),D0_only=proj(d$D0_only),D0_D14=proj(d$after))
+knn<-function(z,k=15){dd<-as.matrix(dist(z));diag(dd)<-Inf;t(apply(dd,1,function(v)order(v)[seq_len(min(k,nrow(z)-1))]))}
+rows<-list();set.seed(41)
+for(anchor in c('D0','D14')){ix<-which(m$day==anchor&(anchor=='D0'|m$batch!='B3'));lev<-sort(unique(m$batch[ix]));n<-min(table(m$batch[ix]));for(rep in 1:5){take<-unlist(lapply(lev,function(b)sample(ix[m$batch[ix]==b],n)));bb<-m$batch[take];for(status in names(zs)){z<-zs[[status]][take,,drop=FALSE];near<-knn(z);p<-sapply(lev,function(b)rowMeans(matrix(bb[near],nrow(near),ncol(near))==b));sil<-silhouette(as.integer(factor(bb)),dist(z));cent<-t(sapply(lev,function(b)colMeans(z[bb==b,,drop=FALSE])));rows[[length(rows)+1L]]<-data.table(anchor=anchor,status=status,repeat_id=rep,n_per_batch=n,balanced_kNN_inverse_simpson=mean(1/rowSums(p^2)),batch_ASW_mixing=1-mean(abs(sil[,'sil_width'])),centroid_gap=mean(dist(cent)))}}}
+fwrite(rbindlist(rows),file.path(root,'panel_a/tables/integration_balanced_subsampling.csv'))
+bio<-rbindlist(lapply(unique(m$batch),function(b){ix<-which(m$batch==b);rbindlist(lapply(c('D0_only','D0_D14'),function(status){v<-zs$Before[ix,,drop=FALSE];w<-zs[[status]][ix,,drop=FALSE];n0<-knn(v);n1<-knn(w);data.table(batch=b,status=status,distance_spearman=cor(as.vector(dist(v)),as.vector(dist(w)),method='spearman'),knn_jaccard=mean(vapply(seq_along(ix),function(j)length(intersect(n0[j,],n1[j,]))/length(union(n0[j,],n1[j,])),numeric(1))))}))}));fwrite(bio,file.path(root,'panel_a/tables/biological_conservation.csv'))
+print(bio);capture.output(sessionInfo(),file=file.path(root,'audit/sessionInfo.txt'))

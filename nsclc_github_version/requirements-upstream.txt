@@ -1,0 +1,6 @@
+-r requirements.txt
+anndata
+h5py
+scikit-learn
+# R: mgcv, ggplot2, patchwork, data.table, jsonlite, monocle2, VGAM, Biobase, igraph, cluster, pheatmap
+# Exact historical versions are retained under upstream/*/02_analysis.

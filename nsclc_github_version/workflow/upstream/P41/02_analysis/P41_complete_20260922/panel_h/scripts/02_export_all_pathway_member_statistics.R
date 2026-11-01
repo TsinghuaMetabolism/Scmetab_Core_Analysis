@@ -1,0 +1,2 @@
+PATHWAY_ID<-'map05231'
+a<-grep('^--file=',commandArgs(),value=TRUE);root<-dirname(dirname(normalizePath(sub('^--file=','',a[1]))));f<-read.csv(file.path(root,'inputs/annotated_feature_KEGG_pathway_mapping.csv'));s<-read.csv(file.path(root,'inputs/all_features_GAM_significance.csv'));keep<-vapply(strsplit(ifelse(is.na(f$PathwayIDs),'',f$PathwayIDs),';',fixed=TRUE),function(x)PATHWAY_ID%in%trimws(x),logical(1));out<-merge(f[keep,],s,by='feature_id');write.csv(out,file.path(root,'tables/P41_choline_pathway_Osi_vs_OsiTCD_significance.csv'),row.names=FALSE)
