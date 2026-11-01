@@ -1,0 +1,11 @@
+{
+  "figure4b": "panel_4b-T1_trajectory",
+  "figure4c": "panel_4c-T3_trajectory",
+  "figure4d": "panel_4d-Batch03_trajectory",
+  "figure4e": "panel_4e-shared_metabolic_dynamics",
+  "figure4f": "panel_4f-SM_metabolic_curves",
+  "figure4g": "panel_4g-SM_day_abundance",
+  "figure5d": "panel_5d-Bridge_SM_comparison",
+  "figure5e": "panel_5e-Myr_projection",
+  "figure5f": "panel_5f-pseudotime_distribution"
+}
