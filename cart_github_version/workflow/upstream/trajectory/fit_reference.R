@@ -101,7 +101,7 @@ write_spline_basis <- function(t, grid, k, output_dir) {
 if (sys.nframe()==0L) {
   args <- commandArgs(TRUE)
   if (length(args)!=4L || !args[1] %in% c('fit','basis'))
-    stop('Usage: Rscript CART_trajectory.R fit|basis INPUT_DIR OUTPUT_DIR SETTINGS.json')
+    stop('Usage: Rscript fit_reference.R fit|basis INPUT_DIR OUTPUT_DIR SETTINGS.json')
   settings <- jsonlite::fromJSON(args[4])
   input <- args[2]; output <- args[3]
   if (args[1]=='fit') {

@@ -1,0 +1,22 @@
+{
+  "python": "3.11.15",
+  "python_packages": {
+    "numpy": "2.4.6",
+    "pandas": "2.3.3",
+    "scipy": "1.17.1"
+  },
+  "rendering_R": {
+    "R": "4.4.3",
+    "ggplot2": "4.0.1",
+    "data.table": "1.17.8",
+    "jsonlite": "2.0.0",
+    "ragg": "1.5.0",
+    "mgcv": "1.9.4"
+  },
+  "trajectory_R": {
+    "monocle": "2.34.0",
+    "DDRTree": "0.1.5",
+    "igraph": "2.0.3"
+  },
+  "scope": "Observed successful Linux validation environments; not a transitive dependency lockfile"
+}

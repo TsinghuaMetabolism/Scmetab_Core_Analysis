@@ -10,7 +10,7 @@ code directory.
 
 `run.py render --input BUNDLE` reads files under
 `BUNDLE/figure4/figure4b/OriginalData/`, and analogously for the other panels.
-`run.py` lists the exact input filenames in `PANELS`. Tables are tab-separated
+`scripts/run_workflow.py` lists the exact input filenames in `PANELS`. Tables are tab-separated
 unless their extension is `.csv`; JSON files contain model/display metadata.
 
 | Panels | Required data |
@@ -40,7 +40,7 @@ dynamic-testing family before target/annotation selection.
 
 ## Computational inputs
 
-`CART_analysis.py` accepts cell × feature arrays and aligned metadata.
+The modules in `workflow/upstream/` accept cell × feature arrays and aligned metadata.
 `tic_log1p` takes original recorded TIC values; `bridge_mean` takes aligned
 features and matched source/Bridge anchors. `select_ordering` receives the
 prespecified stage pairs, selection threshold and feature count.
